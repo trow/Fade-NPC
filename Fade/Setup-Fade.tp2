@@ -21,12 +21,14 @@ ACTION_IF GAME_IS ~eet~ BEGIN
     OUTER_SET EVAL ~%name_source%~ = bg2_chapter
 END
   ACTION_DEFINE_ARRAY E3reload BEGIN setup-fade END
+  ACTION_DEFINE_ARRAY E3noconvert BEGIN install END
   LAF HANDLE_CHARSETS
     INT_VAR
       infer_charsets = 1
     STR_VAR
       tra_path = EVAL ~%MOD_FOLDER%/tra~
       reload_array = E3reload
+      noconvert_array = E3noconvert
       default_language = english
   END
 END
@@ -82,6 +84,9 @@ END// End of ALWAYS text file copying
 LANGUAGE ~English~
          ~english~   
          ~Fade/Tra/english/setup-fade.tra~
+LANGUAGE ~Chinese~
+         ~schinese~   
+         ~Fade/Tra/schinese/install.tra~
 
 
 
